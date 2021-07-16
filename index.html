@@ -1,0 +1,749 @@
+<div class="overall">
+<script  src="https://code.jquery.com/jquery-1.12.4.min.js" type="text/javascript"></script>
+<p id="overallid1" class="class7">
+<a href="#top" onclick="$('html,body').animate({ scrollTop: 0 }); return false;">▲TOPへ戻る</a>
+</p>
+<script type="text/javascript">
+$(function() {
+$(window).scroll(function() {
+var overall1 = 0;
+var overall2 = $(window).scrollTop();
+if( overall2 >= overall1) {
+$("#overallid1").fadeIn();
+}else{
+$("#overallid1").fadeOut();
+}
+});
+});
+</script>
+<body onload=setTimeout('msgdsp()',1000000)>
+<script language="JavaScript">
+<!--
+function msgdsp() {
+alert("10分経過しました。");
+}
+</script>
+</body>
+<style>
+
+
+</style>
+</div>
+
+<body>
+<div class="wrapper">
+<header id="header" class="header">
+<center><h3>header</h3></center>
+
+<div style="text-align:center" class="hidden_box">
+<label for="label1">目次</label>
+<input type="checkbox" id="label1"/>
+<div class="hidden_show">
+    
+<div class="box1">
+<hr size="3" align="left" noshade>
+<h3 class="mokuzih30"><a href="#main">メイン</a></h3>
+<hr size="3" align="left" noshade>
+<h3 class="mokuzih30"><a href="#mokuziu2">時計</a></h3>
+<li><a href="#mokuzi7">現在時刻</a></li>
+<hr size="3" align="left" noshade>
+
+<h3 class="mokuzih30"><a href="#mokuziu0">計算</a></h3>
+<li><a href="#mokuzi1">階乗</a></li>
+<li><a href="#mokuzi11">絶対値</a></li>
+<li><a href="#mokuzi2">累乗</a></li>
+<li><a href="#mokuzi3">平方根</a></li>
+<li><a href="#mokuzi6">2次方程式</a></li>
+<li><a href="#mokuzi8">素数</a></li>
+<hr size="3" align="left" noshade>
+
+<h3 class="mokuzih30"><a href="#mokuziu1">乱数</a></h3>
+<li><a href="#mokuzi4">12面サイコロ</a></li>
+<li><a href="#mokuzi5">6面サイコロ</a></li>
+<hr size="3" align="left" noshade>
+
+<h3 class="mokuzih30"><a href="#mokuziu3">その他</a></h3>
+<li><a href="#mokuzi9">九九の表</a></li>
+<li><a href="#mokuzi10">正角形</a></li>
+<hr size="3" align="left" noshade>
+<hr size="3" align="left" noshade>
+<h3 class="mokuzih30"><a href="#sider">side right</a></h3>
+<hr size="3" align="left" noshade>
+<h3 class="mokuzih30"><a href="#setteimokuzi1">設定</a></h3>
+<li><a href="#setteimokuzi2">背景設定</a></li>
+
+</div>
+</div>
+<style>
+.hidden_box {
+margin: 2em 0;/*前後の余白*/
+padding: 0;
+}
+.hidden_box label {
+padding: 15px;
+font-weight: bold;  
+border: solid 2px black;
+cursor :pointer;
+background: #ffffff;
+}
+.hidden_box label:hover {
+background: #efefef;
+}
+.hidden_box input {
+display: none;
+}
+.hidden_box .hidden_show {
+height: 0;
+padding: 0;
+overflow: hidden;
+opacity: 0;
+transition: 0.8s;
+}
+.hidden_box input:checked ~ .hidden_show {
+padding: 10px 0;
+height: auto;
+opacity: 1;
+}
+</style>
+</div>
+</details></ol>
+<style>
+
+</style>
+
+</header>
+<div class="container">
+
+<div id="main" class="main"><!--main-->
+
+
+<center>main</center>
+
+
+
+
+<div align="center" id=mokuziu2>時計</div><hr size="3" align="left" noshade>
+
+<div id=mokuzi1>
+<div class="mainku"><center>
+<center><details open>
+<summary class="summaryy">時計</summary>
+<div class="class2">
+<div class="box">
+<div id=mokuzi7>
+<font size="10px"><center>
+<p id="tid12"></p>
+</font></center>
+<script>
+function ta2(ts) {
+var tt;
+if( ts < 10 ) { tt = "0" + ts;
+}else{ tt = ts; }
+return tt;
+}
+function ta1() {
+var tu = new Date();
+var tv = ta2( tu.getHours() );
+var tw  = ta2( tu.getMinutes() );
+var tx  = ta2( tu.getSeconds() );
+var ty = tv + "時" + tw + "分" + tx + "秒";
+document.getElementById("tid12").innerHTML = ty;
+}
+setInterval('ta1()',10);
+</script></div></div></div></center></div></details>
+</center></div>
+
+<hr size="3" align="left" noshade>
+
+
+<div align="center" id=mokuziu0>計算</div><hr size="3" align="left" noshade>
+
+<div id=mokuzi1>
+<div class="mainku"><center>
+<center><details open>
+<summary class="summaryy">階乗</summary>
+<div class="class2">
+<div class="box">
+<!doctype html>
+<html>
+<head>
+<script>
+function main1(){
+var main2, main3, main4;
+main4=1;
+main3=parseInt(document.getElementById("main5").value);
+for(main2=1; main2<=main3; main2++){
+main4= main4*main2;
+}
+document.getElementById("main6").value= main4;
+}
+</script>
+</head>
+<body alignment ="center">
+数値: <input type="number" step="0.1" id="main5" value=0 maxlength=3;>
+<button onclick="main1()">Enter</button>
+<br>
+=<input type="number" step="0.1" id="main6" side="30px" readonly><br>
+</body>
+</html>
+</div></div></center></div></details>
+</center></div><hr size="3" align="left" noshade>
+
+<div id=mokuzi2>
+<div class="mainku"><center>
+<center><details open>
+<summary class="summaryy">累乗</summary>
+<div class="class2">
+<div class="box">
+<form oninput="pow1.value = Math.pow(pow2.value,pow3.value);">
+<input type="number" step="0.1" name="pow2" value="0">
+<sup><input type="number" step="0.1" style="width:25px;" name="pow3" value="2"></sup>
+=
+<output name="pow1" style="background:#FCC;"></output>
+</form>
+</div></div></center></div></details>
+</center></div><hr size="3" align="left" noshade>
+
+<div id=mokuzi11>
+<div class="mainku"><center>
+<center><details open>
+<summary class="summaryy">絶対値</summary>
+<div class="class2">
+<div class="box">
+<form oninput="abs1.value = Math.abs(abs2.value);">
+<p>|<input type="number" step="0.1" name="abs2" value="0">|</p>
+=
+<output name="abs1" style="background:#FCC;"></output>
+</form>
+</div></div></center></div></details>
+</center></div><hr size="3" align="left" noshade>
+
+
+<div id=mokuzi3>
+<div class="mainku"><center>
+<center><details open>
+<summary class="summaryy">平方根</summary>
+<div class="class2">
+<div class="box">
+<form oninput="sqrt1.value = Math.sqrt(sqrt2.value);">
+&#8730;<input type="number" step="0.1" name="sqrt2" value="27">
+=
+<output name="sqrt1" style="background:#FCC;"></output>
+</form>
+</div></div></center></div></details>
+</center></div><hr size="3" align="left" noshade>
+
+<div id=mokuzi6>
+<div class="mainku"><center>
+<center><details open>
+<summary class="summaryy">2次方程式</summary>
+<div class="class2">
+<div class="box">
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="style.css">
+<script type="text/javascript" async 
+src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+</head>
+<p> 2次方程式 : \(ax^2 + bx + c = 0\)  \((a \neq 0\))</p>
+<div class = "input">
+<input type="number" step="0.1" id = "tea"> \(x^2+ \)  
+<input type="number" step="0.1" id = "teb"> \(x + \)  
+<input type="number" step="0.1" id = "tec">    
+</div>
+<div class = "tebutton">
+<input type="button" value="計算" id="tebtn">
+</div>
+<div id = "answerMessage" style="display:none">
+<p>解は</p>
+<div class ="answerValues">
+<p id = "answerValue1"></p>　
+<p id="answerValue2"></p>
+</div>
+</div>
+<script src="index.js" type="module"></script>
+</html>
+<script>
+let tebutton = document.getElementById("tebtn");
+let teroot1,teroot2; //二つの解
+function tereset(){
+answerValue1.innerHTML="";　//リセット
+answerValue2.innerHTML ="";
+}
+tebutton.addEventListener('click',function(){
+tereset();
+let tea = document.getElementById("tea").value;
+let teb = document.getElementById("teb").value;
+let tec = document.getElementById("tec").value;
+if(tea == 0){
+alert("a は 0 以外の値");
+tereset();
+return;
+}
+let ted = teb * teb - 4 * tea * tec;
+if (ted > 0){
+teroot1 = (-teb + Math.sqrt(ted)) / (2*tea);
+teroot2 = (-teb - Math.sqrt(ted)) / (2*tea);
+answerValue1.innerHTML = teroot1
+answerValue2.innerHTML = teroot2;
+}else if(ted == 0){
+teroot1 = -teb / (2*tea);
+answerValue1.innerHTML = teroot1;
+}else{
+let realPart = -teb / (2*tea);
+let iPart = Math.sqrt(-ted) / (2 * tea);
+answerValue1.innerHTML = realPart + "+" + iPart + " i";
+answerValue2.innerHTML = realPart + "-" + iPart + " i";
+}
+if(!(tea && teb && tec)){
+alert("a,b,c に数字をタイプしてください");
+tereset();
+return;
+}
+document.getElementById('answerMessage').style.display = 'block';
+})
+</script>
+
+</div></div></center></div></details>
+</center></div><hr size="3" align="left" noshade>
+
+<div id=mokuzi8>
+<div class="mainku"><center>
+<center><details open>
+<summary class="summaryy">素数</summary>
+<div class="class2">
+<div class="box">
+<!DOCTYPE html>
+<html>
+<body>
+<input id="snumber" step="1" type="number" style="width:50px;" min="1" max="10000" placeholder="Number" onchange="sanswer();"/>
+<input id="sresult" type="text"   maxlength="40" placeholder="result" readonly="readonly" />
+<script>
+function sanswer() {
+let snumber  = parseInt(document.getElementById("snumber").value);
+let value   = "";
+if (snumber) {
+value = factorize(snumber).join(" × ");
+}
+document.getElementById("sresult").value = value;
+}
+function factorize(value) {
+let factors = [];
+let divisor = 2;
+while (value >= 2) {
+if (value % divisor == 0) {
+value /= divisor;
+factors.push(divisor);
+}else{
+divisor++;
+}}
+return factors;
+}
+</script>
+</body>
+</html>
+</div></div></center></div></details>
+</center></div><hr size="3" align="left" noshade>
+
+
+<div align="center" id=mokuziu1>乱数</div>
+<hr size="3" align="left" noshade>
+
+<div id=mokuzi4>
+<div class="mainku"><center>
+<center><details open>
+<summary class="summaryy">12面サイコロ</summary>
+<div class="class2">
+<div class="box">
+<center><font size="20"><form>
+<input style="font-size:20px;width:190px;height:30px;" type="button" value="投げる" onclick="saikoro3()">
+<br><span id="saikoro1">表示場所</span>
+</form></font></center>
+<script>
+function saikoro3() {
+var saikoro2 = Math.floor( Math.random() * 12 + 1 );
+document.getElementById("saikoro1").innerHTML = saikoro2;
+}
+</script>
+</div></div></center></div></details>
+</center></div><hr size="3" align="left" noshade>
+
+
+<div id=mokuzi5>
+<div class="mainku"><center>
+<center><details open>
+<summary class="summaryy">6面サイコロ</summary>
+<div class="class2">
+<div class="box">
+<center><font size="20"><form>
+<input style="font-size:20px;width:190px;height:30px;" type="button" value="投げる" onclick="saikoro5()">
+<br><span id="saikoro4">表示場所</span>
+</form></font></center>
+<script>
+function saikoro5() {
+var saikoro6 = Math.floor( Math.random() * 6 + 1 );
+document.getElementById("saikoro4").innerHTML = saikoro6;
+}
+</script>
+</div></div></center></div></details>
+</center></div><hr size="3" align="left" noshade>
+
+
+<div align="center" id=mokuziu3>その他</div>
+<hr size="3" align="left" noshade>
+<div id=mokuzi9>
+<div class="mainku"><center>
+<center><details open>
+<summary class="summaryy">九九</summary>
+<div class="class2">
+<div class="box">
+<!DOCTYPE html>
+<html lang="ja">
+<body>
+<script type="text/javascript">
+document.write("<center>");
+document.write("<h1>九九の表</h1>");
+document.write("<table class=kuku border>");
+for(var i = 1 ; i < 10 ; i++) {
+document.write("<tr>");
+for(var j = 1 ; j < 10 ; j++) {
+document.write("<td class=kuku1>",  i*j  , "</td>");
+}
+document.write("</tr>");
+}
+document.write("</table>");
+document.write("</center>");
+</script>
+</body>
+</html>
+</div></div></center></div></details>
+</center></div><hr size="3" align="left" noshade>
+<style>
+.samplebox {
+transform: rotate( -45deg );
+}
+.summaryy{
+border: solid 3px #000000;
+margin-bottom:1px;
+background: -webkit-repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px);
+background: repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px);
+}
+</style>
+<div id=mokuzi10>
+<div class="mainku"><center>
+<center><details  open>
+<summary class="summaryy">正角形</summary>
+<div class="class2">
+<div class="box">
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<center><canvas></canvas></center><br>
+<center>正<input type="number" step="1" value="3" id="str1">角形</center>
+<script>        
+document.addEventListener('keydown',(event) =>{
+var keyname = event.key
+if (keyname == "ArrowUp"){
+document.getElementById("str1").value = Number(document.getElementById("str1").value) + 0.5
+}else if (keyname == "ArrowDown"){
+document.getElementById("str1").value = document.getElementById("str1").value - 0.5
+}
+})
+function kaiga(a){
+var canvas = document.querySelector('canvas');
+const ctx = canvas.getContext('2d');
+ctx.clearRect(0,0,800,800)
+ctx.fillStyle = "#00f09f";
+ctx.lineWidth = 10;
+ctx.beginPath();
+var b = 0
+ctx.moveTo(660,50)
+for (var i = 0;i <= a;++i){
+ctx.lineTo((Math.sin(Math.PI / 180 * (360 / a * i))* 50)+50,(Math.cos(Math.PI / 180 * (360 / a * i)) * 50)+50)
+}
+ctx.fill()
+}
+function kaiga2(){
+if (document.getElementById("str1").value < 3){
+document.getElementById("str1").value = 3
+}
+if (document.getElementById("str1").value > 5001){
+document.getElementById("str1").value = 5001
+}
+kaiga(document.getElementById("str1").value)
+}
+setInterval(kaiga2,0)
+</script>
+</body>
+</html>
+</div></div></center></div></details>
+</center></div><hr size="3" align="left" noshade>
+
+
+
+</div>
+<div id="sider" class="sider">
+<center>side right</center>
+
+
+<details open>
+<summary class="summaryy" id="setteimokuzi1">設定</summary>
+<details close class="detailss"><br>
+
+<summary class="summaryy" id="setteimokuzi2">背景変更</summary>
+<div class="tablez1">
+<table  class="tablez2" border="1">
+<script>
+function siderc1(){
+document.getElementById('sider').style.color = '#ffffff';
+document.getElementById('sider').style.backgroundColor = '#000000';
+}
+function siderc2(){
+document.getElementById('sider').style.color = '#000000';
+document.getElementById('sider').style.backgroundColor = '#ffffff';
+}
+function siderc3(){
+document.getElementById('sider').style.color = '#000000';
+document.getElementById('sider').style.backgroundColor = '#fd7e00';
+}
+function mainc1(){
+document.getElementById('main').style.color = '#ffffff';
+document.getElementById('main').style.backgroundColor = '#000000';
+}
+function mainc2(){
+document.getElementById('main').style.color = '#000000';
+document.getElementById('main').style.backgroundColor = '#ffffff';
+}
+function mainc3(){
+document.getElementById('main').style.color = '#000000';
+document.getElementById('main').style.backgroundColor = '#ef93b6';
+}
+</script>
+
+<tr>
+<th>  </th>
+<th>main</th>
+<th>sider</th>
+</tr>
+<tr>
+<td>ダーク</td>
+<td id="tablec1" class="tablec1">
+<input type="button" value="ダーク" onclick="mainc1();">
+</td>
+<td id="tablec1" class="tablec1">
+<input type="button" value="ダーク" onclick="siderc1();">
+</td>
+</tr>
+<tr>
+<td>ライト</td>
+<td id="tablec2" class="tablec2">
+<input type="button" value="ライト" onclick="mainc2();">
+</td>
+<td id="tablec2" class="tablec2">
+<input type="button" value="ライト" onclick="siderc2();">
+</td></tr>
+<tr><td>
+元に戻す
+</td>
+<td id="tablec3" class="tablec3">
+<input type="button" value="ピンク" onclick="mainc3();">
+</td>
+<td id="tablec4" class="tablec4">
+<input type="button" value="オレンジ" onclick="siderc3();">
+</td></tr></table>
+</div>
+<style>
+
+</style>
+
+
+</details></details>
+
+
+
+
+
+
+
+</div>
+<div class="side"></div>
+</div>
+<div class="footer">
+<center><h1>footer</h1></center>
+</div>
+</div>
+</body>
+<style>
+body{
+margin: 0px;
+}
+.wrapper {
+margin:0;
+font-size: 30px;
+color: #000000;
+padding: 0px;
+}
+.header{
+padding: 0px;
+margin: 0px;
+background: tomato;
+margin-bottom: 0px;
+padding-bottom: 5px;
+}
+.kuku{
+background: #fff000;
+}
+.kuku1{
+text-align:center;
+}
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+.tebutton{
+padding: 20px;
+}
+.answerValues{
+padding: 10px;
+}
+#tablez1{
+text-align: "center"
+background-color: #800000;
+}
+.tablez2{
+background-color: #800000;
+color: #ffffff;
+margin-left:auto;
+margin-right:auto;
+}
+.tablec1{
+background-color: #000000;
+}
+.tablec2{
+background-color: #ffffff;
+}
+.tablec3{
+background-color: #ef93b6;
+}
+.tablec4{
+background-color: #fd7e00;
+}
+.container {
+margin: 0px;
+display: flex;
+height: 9000px;
+}
+.main {
+margin:0;
+background: #ef93b6;
+width: 70%;
+border-top: solid 6px #ffff00;
+border: solid 2px #fffa9a;
+}
+.sider {
+margin:0;
+background:#fd7e00;
+width: 30%;
+border-top: solid 6px #ff0000;
+border: solid 2px #00fa9a;
+}
+.mokuzih30{
+margin: 0px;
+padding: 0px;
+}
+h3{
+text-align:center;
+}
+a:link {
+color: #0000ff;
+}
+a:visited {
+color: #008000;
+}
+a:hover {
+color: #ff0000;
+}
+a:active {
+color: #ff8000;
+}
+.box1 {
+width: 90%;
+color: #2c2c2f;
+margin-left : auto;
+margin-right : auto;
+background: #cde4ff;/*背景色*/
+}
+.box1 div {
+text-align:center
+margin-left : auto;
+margin-right : auto;
+}
+.footer{
+height: 100px;
+background: plum;
+margin: 0px;
+padding: 0px;
+}
+.box{
+
+color: #2c2c2f;
+background: #cde4ff;
+border-top: solid 5px #5989cf;
+margin-top: 0px;
+margin-bottom: 0px;
+border-bottom: solid 5px #5989cf;
+}
+.mainku{
+margin-top: 20px;
+margin-bottom: 20px;
+margin-right: 20px;
+margin-left: 20px;
+}
+#overallid1 {
+position: fixed;
+bottom: 18px;
+right: 15px;
+width: 7em;
+display: none;
+background-color: #2525aa;
+opacity: 0.75;
+border-radius: 24px;
+text-align: center;
+font-size: 100%;
+font-weight: bold;
+margin: 0px;
+padding: 5px;
+}
+#overallid1 a {
+color: #ffffff;
+text-decoration: none;
+}
+#overallid1 a:hover {
+color: yellow;
+text-decoration: underline;
+}
+.class2{
+border: 5px dotted #dc143c;
+}
+.summary{
+border: 5px dotted #dc143c;
+font-size: 30px;
+}
+.class1{
+padding: 0.5em 1em;
+margin: 2em 0;
+font-weight: bold;
+width: 20em;
+border: 3px solid #ff6347;
+}
+.class1 div {
+margin: 0;
+padding: 0;
+}
+</style>
